@@ -110,5 +110,8 @@
 			"Name": "PerforceSourceControl",
 			"Enabled": false
 		}
+	],
+	"TargetPlatforms": [
+		"WindowsNoEditor"
 	]
 }
