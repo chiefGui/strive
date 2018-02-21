@@ -9,6 +9,6 @@ public class MantiquenEditorTarget : TargetRules
 	{
 		Type = TargetType.Editor;
 
-		ExtraModuleNames.AddRange( new string[] { "Mantiquen" } );
+		ExtraModuleNames.AddRange(new string[] { "Mantiquen" });
 	}
 }

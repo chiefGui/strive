@@ -8,7 +8,6 @@ public class MantiquenTarget : TargetRules
     public MantiquenTarget(TargetInfo Target) : base(Target)
     {
         Type = TargetType.Game;
-
         ExtraModuleNames.AddRange(new string[] { "Mantiquen" });
     }
 }
