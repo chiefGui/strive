@@ -107,8 +107,8 @@
 			"Enabled": false
 		},
 		{
-			"Name": "OnlineSubsystemSteam",
-			"Enabled": true
+			"Name": "AdvancedSteamSessions",
+			"Enabled": false
 		}
 	],
 	"TargetPlatforms": [
