@@ -51,10 +51,6 @@
 			"Enabled": false
 		},
 		{
-			"Name": "Paper2D",
-			"Enabled": false
-		},
-		{
 			"Name": "PhysXVehicles",
 			"Enabled": false
 		},
