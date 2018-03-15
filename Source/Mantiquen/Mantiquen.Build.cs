@@ -8,7 +8,7 @@ public class Mantiquen : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "OnlineSubsystem", "OnlineSubsystemUtils" });
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "GameSparks", "OnlineSubsystem", "OnlineSubsystemUtils" });
 
         PrivateDependencyModuleNames.AddRange(new string[] { });
 

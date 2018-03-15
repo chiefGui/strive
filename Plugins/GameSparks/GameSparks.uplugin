@@ -1,0 +1,42 @@
+{
+	"FileVersion" : 3,
+	"PluginFileVersion" : 1,
+
+	"FriendlyName" : "GameSparksSDK",
+	"Version" : 1001020000,
+	"VersionName" : "1.1.20.0",
+	"CreatedBy" : "GameSparks Ltd, 2016",
+	"CreatedByURL" : "http://www.gamesparks.com",
+	"Description" : "GameSparks Unreal Engine 4 SDK",
+	"Category" : "GameSparks.GameSparksSDK",
+	"EnabledByDefault" : true,
+
+
+	"CanContainContent": true,
+	"MarketplaceURL" : "com.epicgames.launcher://ue/marketplace/content/0bb7b72905c64c7d86c4c430a42bc9c1",
+	"Modules" :
+	[
+		{
+			"Name" : "GameSparks",
+			"Type" : "Runtime",
+			"WhitelistPlatforms" : [ "Win32", "Win64", "Mac", "Android", "IOS", "PS4", "XboxOne", "Linux", "Switch" ],
+			"LoadingPhase" : "PreDefault"
+		},
+		{
+			"Name" : "OnlineSubsystemGameSparks",
+			"Type" : "Runtime",
+			"WhitelistPlatforms" : [ "Win32", "Win64", "Mac", "Android", "IOS", "PS4", "XboxOne", "Linux", "Switch" ],
+			"LoadingPhase" : "Default"
+		},
+	],
+	"Plugins": [
+		{
+			"Name": "OnlineSubsystem",
+			"Enabled": true
+		},
+		{
+			"Name": "OnlineSubsystemUtils",
+			"Enabled": true
+		},
+	]
+}

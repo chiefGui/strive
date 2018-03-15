@@ -4,12 +4,11 @@ using UnrealBuildTool;
 using System.Collections.Generic;
 
 [SupportedPlatforms(UnrealPlatformClass.Server)]
-public class MantiquenServerTarget : TargetRules
+public class MantiquenServerTarget : TargetRules   // Change this line as shown previously
 {
-    public MantiquenServerTarget(TargetInfo Target) : base(Target)
+    public MantiquenServerTarget(TargetInfo Target) : base(Target)  // Change this line as shown previously
     {
         Type = TargetType.Server;
-
-        ExtraModuleNames.AddRange(new string[] { "Mantiquen" });
+        ExtraModuleNames.Add("Mantiquen");    // Change this line as shown previously
     }
 }
