@@ -3,11 +3,11 @@
 using UnrealBuildTool;
 using System.Collections.Generic;
 
-public class MantiquenTarget : TargetRules
+public class StriveTarget : TargetRules
 {
-    public MantiquenTarget(TargetInfo Target) : base(Target)
+    public StriveTarget(TargetInfo Target) : base(Target)
     {
         Type = TargetType.Game;
-        ExtraModuleNames.AddRange(new string[] { "Mantiquen" });
+        ExtraModuleNames.AddRange(new string[] { "Strive" });
     }
 }

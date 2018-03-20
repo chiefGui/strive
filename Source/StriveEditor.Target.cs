@@ -3,12 +3,12 @@
 using UnrealBuildTool;
 using System.Collections.Generic;
 
-public class MantiquenEditorTarget : TargetRules
+public class StriveEditorTarget : TargetRules
 {
-	public MantiquenEditorTarget(TargetInfo Target) : base(Target)
+	public StriveEditorTarget(TargetInfo Target) : base(Target)
 	{
 		Type = TargetType.Editor;
 
-		ExtraModuleNames.AddRange(new string[] { "Mantiquen" });
+		ExtraModuleNames.AddRange(new string[] { "Strive" });
 	}
 }

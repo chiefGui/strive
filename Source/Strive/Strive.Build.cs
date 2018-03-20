@@ -2,9 +2,9 @@
 
 using UnrealBuildTool;
 
-public class Mantiquen : ModuleRules
+public class Strive : ModuleRules
 {
-	public Mantiquen(ReadOnlyTargetRules Target) : base(Target)
+	public Strive(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
