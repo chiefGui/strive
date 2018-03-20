@@ -1,0 +1,66 @@
+"Filters"
+{
+	"favorites"
+	{
+	}
+	"history"
+	{
+		"1"
+		{
+			"name"		"192.168.0.27:27015"
+			"address"		"192.168.0.27:27015"
+			"LastPlayed"		"1515532272"
+			"appid"		"0"
+			"accountid"		"0"
+		}
+		"2"
+		{
+			"name"		"192.168.0.27:27052"
+			"address"		"192.168.0.27:27052"
+			"LastPlayed"		"1514854662"
+			"appid"		"0"
+			"accountid"		"0"
+		}
+		"3"
+		{
+			"name"		"189.1.169.90:10003"
+			"address"		"189.1.169.90:10003"
+			"LastPlayed"		"1514932487"
+			"appid"		"0"
+			"accountid"		"0"
+		}
+		"4"
+		{
+			"name"		"189.1.169.32:10011"
+			"address"		"189.1.169.32:10011"
+			"LastPlayed"		"1514934015"
+			"appid"		"0"
+			"accountid"		"0"
+		}
+		"5"
+		{
+			"name"		"189.1.169.32:10008"
+			"address"		"189.1.169.32:10008"
+			"LastPlayed"		"1515549563"
+			"appid"		"0"
+			"accountid"		"0"
+		}
+		"6"
+		{
+			"name"		"189.1.169.63:10011"
+			"address"		"189.1.169.63:10011"
+			"LastPlayed"		"1515536185"
+			"appid"		"0"
+			"accountid"		"0"
+		}
+		"7"
+		{
+			"name"		"189.1.169.32:10009"
+			"address"		"189.1.169.32:10009"
+			"LastPlayed"		"1515549092"
+			"appid"		"0"
+			"accountid"		"0"
+		}
+	}
+	"lastupdate"		"1521494616"
+}

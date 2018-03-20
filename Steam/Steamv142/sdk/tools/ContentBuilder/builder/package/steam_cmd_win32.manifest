@@ -1,0 +1,51 @@
+"win32"
+{
+	"version"		"1513124286"
+	"steamcmd_public_all"
+	{
+		"file"		"steamcmd_public_all.zip.ec542eb40136d7ebe4067386834f25546c4a1d01"
+		"size"		"65660"
+		"sha2"		"1332cc79160c3bd0b2b40a7cc35ec7b922e63f4fd0998a7ead98a469d8878ae0"
+		"zipvz"		"steamcmd_public_all.zip.vz.095c0f606502da8c4c4322bdd2c76c3fed7dccb0_26024"
+		"sha2vz"		"282097931f92c411103d18f3ec8ec1713580618f12eaf9d7bdfe8eae142300b1"
+	}
+	"steamcmd_bins_win32"
+	{
+		"file"		"steamcmd_bins_win32.zip.ac948d0721687819d5707805160ab496976a5d17"
+		"size"		"6608249"
+		"sha2"		"69abc3bdbb9f1d470402a19d46219656704b807d0364df13eaf77332939a25c0"
+		"zipvz"		"steamcmd_bins_win32.zip.vz.508dde671061506718b98a0d165045c101d3155b_4395896"
+		"sha2vz"		"ac3e93f77abb542ef207715f94b939e01c7b3af6d1a76e57cc6af00b683abbb0"
+	}
+	"steamcmd_steamservice_win32"
+	{
+		"file"		"steamcmd_steamservice_win32.zip.94210fda32ed089bd3f7c075b93c18e9e5174b27"
+		"size"		"1711635"
+		"sha2"		"d1cfc17a74bc7b9bfb3c9a6e69ab5f012e55f01286c0daaa13510e66f7a118d6"
+		"zipvz"		"steamcmd_steamservice_win32.zip.vz.39e170c2b901402fa3737b9aa4987f7ea46ddc7b_1012025"
+		"sha2vz"		"4d26de49c38868fa6a300921c051f37bb098c5646132e69958df63c2a1732512"
+	}
+	"steamcmd_steamerrorreporter_win32"
+	{
+		"file"		"steamcmd_steamerrorreporter_win32.zip.147dcf5532e8ac63a8a7ff4f561219e9efa994ed"
+		"size"		"144625"
+		"sha2"		"a6c8f14dfe24b532d6530bc07473678fe8521658a19db5ade6cea903bd3067ca"
+	}
+	"steamcmd_win32"
+	{
+		"file"		"steamcmd_win32.zip.b3f2defe35384e12ccc39fa2e76c80b53de1e753"
+		"size"		"1276319"
+		"sha2"		"951261d395f4bd67e39506f61090208ec41530b381f99b93c7841b5129bb9db0"
+		"zipvz"		"steamcmd_win32.zip.vz.7d0201c25604354ed87f976c1ca4452bc3617b42_1035105"
+		"sha2vz"		"c90f9a166446e9563540278f0846f6b1ea5fc89b5ca67ab3e4efd4400bcd4f41"
+		"IsBootstrapperPackage"		"1"
+	}
+}
+"kvsign2"
+{
+	"win32"		"0b9d0d419686e8010aebb804f13ac41d83054f2b73432137e639e7c2e8d4a3f89e123d45e8da9e99ab05892df6b5b00f7eb71dba95db1e5afb4124dcc1977c01"
+}
+"kvsignatures"
+{
+	"win32"		"8705f66f4118b19f744b69765084a62420446e1416c305cc9f77fe329751272740eafcb3e764bb4e22c402e31bdf5d46b684f2fbbb10178330e9f04dcf05c2016180463c88d705c3d8b54bb78936e7e0bdd45b39d2f6cc4d07148d8a7bf866039cb4e8d72525e480d3b50a2c7d203d7f06404cbff8453e3d6b52aa7d57ee9cec"
+}

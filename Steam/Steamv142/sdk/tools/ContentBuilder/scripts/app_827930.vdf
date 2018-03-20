@@ -1,0 +1,14 @@
+"appbuild"
+{
+	"appid" "827930"
+	"desc" "Hello world"
+	"buildoutput" "C:\Strive\Steam\Steamv142\sdk\tools\ContentBuilder\output"
+	"contentroot" ""
+	"setlive" ""
+	"preview" "0"
+	"local"	""
+	"depots"
+	{
+		"827931"	"C:\Strive\Steam\Steamv142\sdk\tools\ContentBuilder\scripts\depot_827931.vdf"
+	}
+}

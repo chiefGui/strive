@@ -1,0 +1,9 @@
+
+
+[2018-03-20 15:19:52] Attempting to find current bucket; temporary dir: C:\Strive\Steam\Steamv142\sdk\tools\ContentBuilder\builder\shader_cache_temp_dir_gl_64
+[2018-03-20 15:19:52] Creating shader cache directory: C:\Strive\Steam\Steamv142\sdk\tools\ContentBuilder\builder\shader_cache_temp_dir_gl_64
+[2018-03-20 15:19:52] Unknown shader cache type, ignoring.
+[2018-03-20 15:19:53] Attempting to find current bucket; temporary dir: C:\Strive\Steam\Steamv142\sdk\tools\ContentBuilder\builder\shader_cache_temp_dir_gl_32
+[2018-03-20 15:19:53] Creating shader cache directory: C:\Strive\Steam\Steamv142\sdk\tools\ContentBuilder\builder\shader_cache_temp_dir_gl_32
+[2018-03-20 15:19:53] Unknown shader cache type, ignoring.
+[2018-03-20 15:19:53] Found 0 current buckets:

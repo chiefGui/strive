@@ -1,0 +1,4 @@
+
+
+[2018-03-20 15:19:52] Loaded 0 apps from install folder "C:\Strive\Steam\Steamv142\sdk\tools\ContentBuilder\builder\steamapps\appmanifest_*.acf".
+[2018-03-20 15:20:10] Got 100 content servers from directory

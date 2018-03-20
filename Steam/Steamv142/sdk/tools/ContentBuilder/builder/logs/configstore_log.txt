@@ -1,0 +1,16 @@
+
+
+[2018-03-20 15:19:52] Failed to read store 'install' from 'C:\Strive\Steam\Steamv142\sdk\tools\ContentBuilder\builder\config\config.vdf.tmp'
+[2018-03-20 15:19:52] Failed to read store 'install' from 'C:\Strive\Steam\Steamv142\sdk\tools\ContentBuilder\builder\config\config.vdf.tmp'
+[2018-03-20 15:19:52] Failed to read store 'install' from 'C:\Strive\Steam\Steamv142\sdk\tools\ContentBuilder\builder\config\config.vdf.tmp'
+[2018-03-20 15:19:53] Flushed store 'install' to 'C:\Strive\Steam\Steamv142\sdk\tools\ContentBuilder\builder\config\config.vdf'
+[2018-03-20 15:19:54] Flushed store 'install' to 'C:\Strive\Steam\Steamv142\sdk\tools\ContentBuilder\builder\config\config.vdf'
+[2018-03-20 15:20:09] Failed to read store 'userlocal' from 'C:\Strive\Steam\Steamv142\sdk\tools\ContentBuilder\builder\userdata\66336721\config\localconfig.vdf.tmp'
+[2018-03-20 15:20:10] Flushed store 'install' to 'C:\Strive\Steam\Steamv142\sdk\tools\ContentBuilder\builder\config\config.vdf'
+[2018-03-20 15:20:10] Flushed store 'userlocal' to 'C:\Strive\Steam\Steamv142\sdk\tools\ContentBuilder\builder\userdata\66336721\config\localconfig.vdf'
+[2018-03-20 15:20:10] Flushed store 'userlocal' to 'C:\Strive\Steam\Steamv142\sdk\tools\ContentBuilder\builder\userdata\66336721\config\localconfig.vdf'
+[2018-03-20 15:20:11] Flushed store 'install' to 'C:\Strive\Steam\Steamv142\sdk\tools\ContentBuilder\builder\config\config.vdf'
+[2018-03-20 15:20:12] Flushed store 'userlocal' to 'C:\Strive\Steam\Steamv142\sdk\tools\ContentBuilder\builder\userdata\66336721\config\localconfig.vdf'
+[2018-03-20 15:20:19] Flushed store 'userlocal' to 'C:\Strive\Steam\Steamv142\sdk\tools\ContentBuilder\builder\userdata\66336721\config\localconfig.vdf'
+[2018-03-20 15:20:20] Flushed store 'userlocal' to 'C:\Strive\Steam\Steamv142\sdk\tools\ContentBuilder\builder\userdata\66336721\config\localconfig.vdf'
+[2018-03-20 15:20:22] Flushed store 'userlocal' to 'C:\Strive\Steam\Steamv142\sdk\tools\ContentBuilder\builder\userdata\66336721\config\localconfig.vdf'

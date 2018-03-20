@@ -1,0 +1,14 @@
+
+
+[2018-03-20 15:20:09] RequestAppInfoUpdate: nNumAppIDs 1
+[2018-03-20 15:20:10] ProductInfoChanges: change number 0->4203807, apps: 0/0, packages: 0/0
+[2018-03-20 15:20:10] UpdatesJob: requesting 1 apps, 159 packages (meta data, 1024 prev attempts)
+[2018-03-20 15:20:10] UpdatesJob: requesting 1 apps, 159 packages (full data, 1024 prev attempts)
+[2018-03-20 15:20:11] UpdatesJob: finished OK, nAppsUpdated 1 (2 KB), nPackagesUpdated 159 (47 KB)
+[2018-03-20 15:20:11] UpdatesJob: requesting 634 apps, 0 packages (meta data, 1024 prev attempts)
+[2018-03-20 15:20:12] UpdatesJob: requested 107 access tokens, 95 received, 12 denied
+[2018-03-20 15:20:12] UpdatesJob: updated SHAs with 95 new access tokens
+[2018-03-20 15:20:13] UpdatesJob: downloaded 64 apps via HTTP, 1605 KB (416 KB compressed)
+[2018-03-20 15:20:13] UpdatesJob: requesting 570 apps, 0 packages (full data, 1024 prev attempts)
+[2018-03-20 15:20:19] UpdatesJob: finished OK, nAppsUpdated 634 (2747 KB), nPackagesUpdated 0 (0 KB)
+[2018-03-20 15:20:34] Starting async write C:\Strive\Steam\Steamv142\sdk\tools\ContentBuilder\builder/appcache/appinfo.vdf (2055603 bytes)

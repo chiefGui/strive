@@ -1,0 +1,16 @@
+
+
+[2018-03-20 15:20:09] [U:1:66336721] [AppID 7] Init cache request complete
+[2018-03-20 15:20:09] Starting sync job
+[2018-03-20 15:20:09] [AppID 7] Starting sync (init)
+[2018-03-20 15:20:19] Starting sync job
+[2018-03-20 15:20:19] [AppID 7] Starting sync (download)
+[2018-03-20 15:20:19] [AppID 7] Need to download file serverbrowser_hist.vdf
+[2018-03-20 15:20:19] [AppID 7] Need to download file sharedconfig.vdf
+[2018-03-20 15:20:20] [AppID 7] HTTP download for file 'serverbrowser_hist.vdf' from host 'steamcloud-saopaulo.storage.googleapis.com' beginning. . .
+[2018-03-20 15:20:21] [AppID 7] HTTP download for file 'serverbrowser_hist.vdf' from host 'steamcloud-saopaulo.storage.googleapis.com' - Success.
+[2018-03-20 15:20:21] [AppID 7] Download OK for file serverbrowser_hist.vdf
+[2018-03-20 15:20:21] [AppID 7] HTTP download for file 'sharedconfig.vdf' from host 'steamcloudsaopaulo.blob.core.windows.net' beginning. . .
+[2018-03-20 15:20:21] [AppID 7] HTTP download for file 'sharedconfig.vdf' from host 'steamcloudsaopaulo.blob.core.windows.net' - Success.
+[2018-03-20 15:20:21] [AppID 7] Download OK for file sharedconfig.vdf
+[2018-03-20 15:20:21] [AppID 7] Download complete, result OK

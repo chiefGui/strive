@@ -1,0 +1,21 @@
+
+
+[2018-03-20 15:20:09] Setting parental settings for 66336721, account flags are 140840c5
+[2018-03-20 15:20:09] Settings dump:
+[2018-03-20 15:20:09] 	Account ID: 66336721
+[2018-03-20 15:20:09] 	Enabled: false
+[2018-03-20 15:20:09] 	Base list: 0 (Allow all games)
+[2018-03-20 15:20:09] 	No custom list
+[2018-03-20 15:20:09] 	Enabled features (1800):
+[2018-03-20 15:20:09] 		Library
+[2018-03-20 15:20:09] 		Test
+[2018-03-20 15:20:09] Disabling parental settings for 66336721, account flags are 140840c5
+[2018-03-20 15:20:09] Validating parental settings
+[2018-03-20 15:20:09] Settings dump:
+[2018-03-20 15:20:09] 	Account ID: 66336721
+[2018-03-20 15:20:09] 	Enabled: false
+[2018-03-20 15:20:09] 	Base list: 0 (Allow all games)
+[2018-03-20 15:20:09] 	No custom list
+[2018-03-20 15:20:09] 	Enabled features (1800):
+[2018-03-20 15:20:09] 		Library
+[2018-03-20 15:20:09] 		Test

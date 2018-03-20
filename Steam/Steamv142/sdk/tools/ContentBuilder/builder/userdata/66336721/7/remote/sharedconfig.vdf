@@ -1,0 +1,420 @@
+"UserLocalConfigStore"
+{
+	"Software"
+	{
+		"Valve"
+		{
+			"Steam"
+			{
+				"SSAVersion"		"3"
+				"SteamDefaultDialog"		"#app_store"
+				"DesktopShortcutCheck"		"1"
+				"StartMenuShortcutCheck"		"0"
+				"AutoLaunchGameListCheck"		"1"
+				"apps"
+				{
+					"10700"
+					{
+						"LastPlayed"		"1277430831"
+						"tags"		""
+					}
+					"320"
+					{
+						"LastPlayed"		"1286472087"
+						"tags"		""
+					}
+					"440"
+					{
+						"LastPlayed"		"1329678846"
+						"cloudenabled"		"1"
+						"tags"		""
+					}
+					"310"
+					{
+						"LastPlayed"		"1277939753"
+					}
+					"20500"
+					{
+						"LastPlayed"		"1278178490"
+						"tags"		""
+					}
+					"630"
+					{
+						"LastPlayed"		"1301864125"
+					}
+					"220"
+					{
+						"LastPlayed"		"1327442257"
+						"tags"		""
+						"cloudenabled"		"1"
+					}
+					"17500"
+					{
+						"LastPlayed"		"1281736176"
+					}
+					"50280"
+					{
+						"LastPlayed"		"1282339378"
+					}
+					"28020"
+					{
+						"LastPlayed"		"1282238269"
+					}
+					"410"
+					{
+						"LastPlayed"		"1287875963"
+						"tags"		""
+					}
+					"4000"
+					{
+						"LastPlayed"		"1327589606"
+						"cloudenabled"		"1"
+						"tags"		""
+					}
+					"1250"
+					{
+						"LastPlayed"		"1284156797"
+					}
+					"35700"
+					{
+						"LastPlayed"		"1284876688"
+					}
+					"550"
+					{
+						"LastPlayed"		"1350525292"
+						"tags"		""
+						"cloudenabled"		"1"
+					}
+					"10"
+					{
+						"LastPlayed"		"1305580338"
+						"tags"		""
+					}
+					"5"
+					{
+						"LastPlayed"		"1286403754"
+					}
+					"47770"
+					{
+						"LastPlayed"		"1286509069"
+					}
+					"80"
+					{
+						"tags"		""
+					}
+					"100"
+					{
+						"tags"		""
+					}
+					"70"
+					{
+						"tags"
+						{
+							"0"		"FPS"
+						}
+					}
+					"340"
+					{
+						"tags"		""
+					}
+					"42700"
+					{
+						"LastPlayed"		"1303014256"
+						"cloudenabled"		"1"
+					}
+					"42710"
+					{
+						"LastPlayed"		"1342842557"
+					}
+					"3483"
+					{
+						"LastPlayed"		"1292130787"
+					}
+					"24960"
+					{
+						"LastPlayed"		"1315175579"
+						"tags"		""
+					}
+					"50620"
+					{
+						"LastPlayed"		"1294190733"
+					}
+					"240"
+					{
+						"LastPlayed"		"1327893770"
+					}
+					"13260"
+					{
+						"LastPlayed"		"1297984106"
+					}
+					"211"
+					{
+						"tags"		""
+					}
+					"400"
+					{
+						"LastPlayed"		"1299465008"
+					}
+					"21980"
+					{
+						"LastPlayed"		"1335896435"
+					}
+					"19900"
+					{
+						"LastPlayed"		"1306194562"
+					}
+					"218"
+					{
+						"LastPlayed"		"1300548242"
+						"tags"
+						{
+							"0"		"favorite"
+						}
+					}
+					"63200"
+					{
+						"LastPlayed"		"1300575418"
+					}
+					"17050"
+					{
+						"LastPlayed"		"1300752160"
+					}
+					"42120"
+					{
+						"LastPlayed"		"1307911662"
+					}
+					"47940"
+					{
+						"LastPlayed"		"1301758406"
+					}
+					"12120"
+					{
+						"LastPlayed"		"1305390363"
+					}
+					"620"
+					{
+						"cloudenabled"		"1"
+						"LastPlayed"		"1306013970"
+					}
+					"39000"
+					{
+						"LastPlayed"		"1303615353"
+					}
+					"29150"
+					{
+						"LastPlayed"		"1303615419"
+					}
+					"92"
+					{
+						"LastPlayed"		"1303615796"
+					}
+					"480"
+					{
+						"LastPlayed"		"1303615929"
+					}
+					"29140"
+					{
+						"LastPlayed"		"1303616092"
+					}
+					"31500"
+					{
+						"LastPlayed"		"1303616214"
+					}
+					"8230"
+					{
+						"LastPlayed"		"1303617587"
+					}
+					"629"
+					{
+						"LastPlayed"		"1305581826"
+						"tags"
+						{
+							"0"		"favorite"
+						}
+					}
+					"9880"
+					{
+						"LastPlayed"		"1308421883"
+					}
+					"42910"
+					{
+						"LastPlayed"		"1312227282"
+					}
+					"12210"
+					{
+						"LastPlayed"		"1329784656"
+					}
+					"109410"
+					{
+						"LastPlayed"		"1329601436"
+					}
+					"8510"
+					{
+						"LastPlayed"		"1329947851"
+					}
+					"41070"
+					{
+						"LastPlayed"		"1330303930"
+					}
+					"570"
+					{
+						"cloudenabled"		"1"
+						"LastPlayed"		"1370312271"
+					}
+					"104700"
+					{
+						"LastPlayed"		"1335749482"
+					}
+					"9900"
+					{
+						"LastPlayed"		"1343958437"
+					}
+					"218230"
+					{
+						"LastPlayed"		"1353735695"
+					}
+					"50300"
+					{
+						"LastPlayed"		"1360786660"
+					}
+					"35450"
+					{
+						"LastPlayed"		"1368232653"
+					}
+					"231250"
+					{
+						"LastPlayed"		"1368978887"
+					}
+					"1840"
+					{
+						"LastPlayed"		"1369048542"
+					}
+					"211420"
+					{
+						"cloudenabled"		"1"
+					}
+					"8870"
+					{
+						"cloudenabled"		"1"
+					}
+					"236850"
+					{
+						"cloudenabled"		"1"
+					}
+					"218620"
+					{
+						"cloudenabled"		"1"
+					}
+					"221380"
+					{
+						"cloudenabled"		"1"
+					}
+					"8930"
+					{
+						"cloudenabled"		"1"
+					}
+				}
+				"PrivacyPolicyVersion"		"2"
+			}
+		}
+	}
+	"TradeInfoHint"		"1"
+	"Web"
+	{
+		"WebFav0_URL"		"https://www.google.com/"
+		"WebFav0_Name"		"Google"
+		"WebFav1_URL"		"http://www.youtube.com/"
+		"WebFav1_Name"		"YouTube"
+		"WebFav2_URL"		"http://www.twitter.com/"
+		"WebFav2_Name"		"Twitter"
+		"WebFav3_URL"		"http://www.facebook.com/"
+		"WebFav3_Name"		"Facebook"
+		"WebFav4_URL"		"http://www.reddit.com/"
+		"WebFav4_Name"		"Reddit"
+		"WebRecent0_URL"		"http://steamcommunity.com/id/chiefgui/"
+		"WebRecent0_Name"		"Steam Community :: chiefGui"
+		"WebFrequent0_URL"		"http://steamcommunity.com/id/chiefgui/"
+		"WebFrequent0_Name"		"Steam Community :: chiefGui"
+		"WebFrequent0_Access"		"3"
+		"WebRecent1_URL"		"http://www.google.com.br/"
+		"WebRecent1_Name"		"Google"
+		"WebFrequent1_URL"		"http://www.google.com.br/"
+		"WebFrequent1_Name"		"Google"
+		"WebFrequent1_Access"		"1"
+		"WebRecent2_URL"		"http://steamcommunity.com/id/chiefgui/home/invites"
+		"WebRecent2_Name"		"Steam Community :: Invites :: Say hello to morrow"
+		"WebFrequent2_URL"		"http://.y./"
+		"WebFrequent2_Name"		"Error"
+		"WebFrequent2_Access"		"1"
+		"WebRecent3_URL"		"http://steamcommunity.com/id/chiefgui/home/invites/"
+		"WebRecent3_Name"		"Steam Community :: Invites :: chiefGui"
+		"WebFrequent3_URL"		"http://steamcommunity.com/id/chiefgui/home/invites/"
+		"WebFrequent3_Name"		"Steam Community :: Invites :: chiefGui"
+		"WebFrequent3_Access"		"1"
+		"WebRecent4_URL"		"http://li.-..../"
+		"WebRecent4_Name"		"Error"
+		"WebFrequent4_URL"		"http://steamcommunity.com/id/chiefgui/home/invites"
+		"WebFrequent4_Name"		"Steam Community :: Invites :: Say hello to morrow"
+		"WebFrequent4_Access"		"1"
+		"WebRecent5_URL"		"http://.y./"
+		"WebRecent5_Name"		"Error"
+		"WebFrequent5_URL"		"http://li.-..../"
+		"WebFrequent5_Name"		"Error"
+		"WebFrequent5_Access"		"1"
+	}
+	"controller_config"
+	{
+		"443510"
+		{
+			"usetime"		"0"
+		}
+		"268910"
+		{
+			"usetime"		"3701.7236328125"
+		}
+		"9450"
+		{
+			"usetime"		"7594.55859375"
+		}
+		"730"
+		{
+			"usetime"		"13958.0498046875"
+		}
+		"292030"
+		{
+			"usetime"		"849.31591796875"
+		}
+		"219990"
+		{
+			"usetime"		"17439.0703125"
+		}
+		"220240"
+		{
+			"usetime"		"8765.6015625"
+		}
+		"4000"
+		{
+			"usetime"		"10504.3203125"
+		}
+		"334230"
+		{
+			"usetime"		"4940.21875"
+		}
+		"0"
+		{
+			"usetime"		"2.8006744384765625"
+		}
+		"unreal engine 4"
+		{
+			"usetime"		"21466.923828125"
+		}
+		"435150"
+		{
+			"usetime"		"6106.91015625"
+		}
+		"42910"
+		{
+			"usetime"		"2913.203125"
+		}
+	}
+}
