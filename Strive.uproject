@@ -103,10 +103,6 @@
 			"Enabled": false
 		},
 		{
-			"Name": "AdvancedSteamSessions",
-			"Enabled": false
-		},
-		{
 			"Name": "AvfMedia",
 			"Enabled": false
 		},
