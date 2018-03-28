@@ -4,10 +4,14 @@ Build/
 Intermediate/
 Saved/
 DerivedDataCache/
-Packages/
+Packages/WindowsNoEditor
+Packages/WindowsServer/Content
+Packages/WindowsServer/Logs
+Packages/WindowsServer/Dependencies
 Content/Testing/
 Steam/
 Releases/
 Runtimes/
 x64/
+Assets/
 Strive.sln

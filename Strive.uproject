@@ -13,124 +13,128 @@
 			]
 		}
 	],
-	"Plugins": [
-		{
-			"Name": "LowEntryExtStdLib",
-			"Enabled": true,
-			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/846c2ad08f164f45b0335ecebf85361e"
-		},
-		{
-			"Name": "OnlineSubsystemGooglePlay",
-			"Enabled": false,
-			"SupportedTargetPlatforms": [
-				"Android"
-			]
-		},
-		{
-			"Name": "OnlineSubsystemIOS",
-			"Enabled": false,
-			"SupportedTargetPlatforms": [
-				"IOS",
-				"TVOS"
-			]
-		},
-		{
-			"Name": "AppleARKit",
-			"Enabled": false
-		},
-		{
-			"Name": "AppleMoviePlayer",
-			"Enabled": false
-		},
-		{
-			"Name": "OculusVR",
-			"Enabled": false
-		},
-		{
-			"Name": "MobilePatchingUtils",
-			"Enabled": false
-		},
-		{
-			"Name": "PhysXVehicles",
-			"Enabled": false
-		},
-		{
-			"Name": "SteamVR",
-			"Enabled": false
-		},
-		{
-			"Name": "SubversionSourceControl",
-			"Enabled": false
-		},
-		{
-			"Name": "MobileLauncherProfileWizard",
-			"Enabled": false
-		},
-		{
-			"Name": "XCodeSourceCodeAccess",
-			"Enabled": false
-		},
-		{
-			"Name": "HTML5Networking",
-			"Enabled": false
-		},
-		{
-			"Name": "AndroidDeviceProfileSelector",
-			"Enabled": false
-		},
-		{
-			"Name": "AndroidMedia",
-			"Enabled": false
-		},
-		{
-			"Name": "AndroidMoviePlayer",
-			"Enabled": false
-		},
-		{
-			"Name": "AndroidPermission",
-			"Enabled": false
-		},
-		{
-			"Name": "AlembicImporter",
-			"Enabled": false
-		},
-		{
-			"Name": "GoogleCloudMessaging",
-			"Enabled": false
-		},
-		{
-			"Name": "PerforceSourceControl",
-			"Enabled": false
-		},
-		{
-			"Name": "AvfMedia",
-			"Enabled": false
-		},
-		{
-			"Name": "CableComponent",
-			"Enabled": false
-		},
-		{
-			"Name": "ImgMedia",
-			"Enabled": false
-		},
-		{
-			"Name": "IOSDeviceProfileSelector",
-			"Enabled": false
-		},
-		{
-			"Name": "KDevelopSourceCodeAccess",
-			"Enabled": false
-		},
-		{
-			"Name": "LocationServicesBPLibrary",
-			"Enabled": false
-		},
-		{
-			"Name": "UObjectPlugin",
-			"Enabled": false
-		}
-	],
+    "Plugins": [
+        {
+            "Name": "GameLiftServerSDK",
+            "Enabled": true
+        },
+        {
+            "Name": "LowEntryExtStdLib",
+            "Enabled": true,
+            "MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/846c2ad08f164f45b0335ecebf85361e"
+        },
+        {
+            "Name": "OnlineSubsystemGooglePlay",
+            "Enabled": false,
+            "SupportedTargetPlatforms": [
+                "Android"
+            ]
+        },
+        {
+            "Name": "OnlineSubsystemIOS",
+            "Enabled": false,
+            "SupportedTargetPlatforms": [
+                "IOS",
+                "TVOS"
+            ]
+        },
+        {
+            "Name": "AppleARKit",
+            "Enabled": false
+        },
+        {
+            "Name": "AppleMoviePlayer",
+            "Enabled": false
+        },
+        {
+            "Name": "OculusVR",
+            "Enabled": false
+        },
+        {
+            "Name": "MobilePatchingUtils",
+            "Enabled": false
+        },
+        {
+            "Name": "PhysXVehicles",
+            "Enabled": false
+        },
+        {
+            "Name": "SteamVR",
+            "Enabled": false
+        },
+        {
+            "Name": "SubversionSourceControl",
+            "Enabled": false
+        },
+        {
+            "Name": "MobileLauncherProfileWizard",
+            "Enabled": false
+        },
+        {
+            "Name": "XCodeSourceCodeAccess",
+            "Enabled": false
+        },
+        {
+            "Name": "HTML5Networking",
+            "Enabled": false
+        },
+        {
+            "Name": "AndroidDeviceProfileSelector",
+            "Enabled": false
+        },
+        {
+            "Name": "AndroidMedia",
+            "Enabled": false
+        },
+        {
+            "Name": "AndroidMoviePlayer",
+            "Enabled": false
+        },
+        {
+            "Name": "AndroidPermission",
+            "Enabled": false
+        },
+        {
+            "Name": "AlembicImporter",
+            "Enabled": false
+        },
+        {
+            "Name": "GoogleCloudMessaging",
+            "Enabled": false
+        },
+        {
+            "Name": "PerforceSourceControl",
+            "Enabled": false
+        },
+        {
+            "Name": "AvfMedia",
+            "Enabled": false
+        },
+        {
+            "Name": "CableComponent",
+            "Enabled": false
+        },
+        {
+            "Name": "ImgMedia",
+            "Enabled": false
+        },
+        {
+            "Name": "IOSDeviceProfileSelector",
+            "Enabled": false
+        },
+        {
+            "Name": "KDevelopSourceCodeAccess",
+            "Enabled": false
+        },
+        {
+            "Name": "LocationServicesBPLibrary",
+            "Enabled": false
+        },
+        {
+            "Name": "UObjectPlugin",
+            "Enabled": false
+        }
+    ],
 	"TargetPlatforms": [
 		"WindowsNoEditor"
 	]
