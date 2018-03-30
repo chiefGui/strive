@@ -7,3 +7,4 @@ SET directxFileName="dx.exe"
 
 "%dependenciesLocation%\%vcredistFileName%" /install /quiet /norestart /log %logsLocation%/%vcredistFileName%.log
 "%dependenciesLocation%\%directxFileName%" /q
+
