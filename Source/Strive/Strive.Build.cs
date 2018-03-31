@@ -8,11 +8,13 @@ public class Strive : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "GameSparks", "OnlineSubsystem", "OnlineSubsystemUtils", "GameLiftClientSDK", "GameLiftServerSDK" });
+        // I do need to add GameLiftServerSDK back!!!!!!!!!!!!!!
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "GameSparks", "OnlineSubsystem", "OnlineSubsystemUtils" });
         PrivateDependencyModuleNames.AddRange(new string[] { });
 
         DynamicallyLoadedModuleNames.Add("OnlineSubsystemSteam");
 
+        /*
         if (Target.Type == TargetType.Server)
         {
             bEnableExceptions = true;
@@ -24,7 +26,7 @@ public class Strive : ModuleRules
         } else
         {
             Definitions.Add("WITH_GAMELIFT=0");
-        }
+        }*/
 
         // Uncomment if you are using Slate UI
         // PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });
