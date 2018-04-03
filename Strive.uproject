@@ -16,7 +16,10 @@
     "Plugins": [
         {
             "Name": "GameLiftServerSDK",
-            "Enabled": true
+            "Enabled": true,
+            "WhitelistTargets": [
+                "Server"
+            ]
         },
         {
             "Name": "LowEntryExtStdLib",

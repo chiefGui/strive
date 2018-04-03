@@ -1,7 +1,10 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "OnlineGameMode.h"
+
+#if WITH_GAMELIFT
 #include "GameLiftServerSDK.h"
+#endif
 
 AOnlineGameMode::AOnlineGameMode()
 	: Super()

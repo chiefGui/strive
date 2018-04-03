@@ -1,0 +1,1 @@
+aws gamelift upload-build --operating-system WINDOWS_2012 --build-root ".\WindowsServer" --name Test --build-version v0.0.26.2 --region sa-east-1

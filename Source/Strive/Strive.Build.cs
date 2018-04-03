@@ -8,14 +8,15 @@ public class Strive : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "GameSparks", "OnlineSubsystem", "OnlineSubsystemUtils", "GameLiftServerSDK" });
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "GameSparks", "OnlineSubsystem", "OnlineSubsystemUtils" });
         PrivateDependencyModuleNames.AddRange(new string[] { });
 
         DynamicallyLoadedModuleNames.Add("OnlineSubsystemSteam");
 
         if (Target.Type == TargetType.Server)
         {
-            Definitions.Add("WITH_GAMELIFT=1");
+            bEnableExceptions = true;
+            PublicDependencyModuleNames.AddRange(new string[] { "GameLiftServerSDK" });
         } else
         {
             Definitions.Add("WITH_GAMELIFT=0");
