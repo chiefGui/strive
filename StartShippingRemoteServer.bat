@@ -1,4 +1,4 @@
-SET location=%~dp0Packages\WindowsServer\
-SET fileName=StriveServer.exe
+SET location=%~dp0Binaries\Win64
+SET fileName=StriveServer-Win64-Shipping.exe
 
-"%location%\%filename%" /Game/Levels/Plane/Planet -log
+"%location%\%filename%" Westgrim -log
