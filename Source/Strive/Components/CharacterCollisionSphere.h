@@ -8,10 +8,11 @@
 #include "CharacterCollisionSphere.generated.h"
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnOtherCharacterBeginOverlapSignature, class AOnlineCharacter*, OtherCharacter);
+
 /**
  * 
  */
-UCLASS(Blueprintable, hideCategories=("Physics", "Mobile", "HLOD", "Sockets", "Navigation", "Collision", "Tags", "Cooking"), meta = (DisplayName="Character Collision Sphere", BlueprintSpawnableComponent, Tooltip="A ready-to-use Collision Sphere for Characters. It primarily handles the most basic logics behind a Collision Sphere for characters."))
+UCLASS(Blueprintable, hideCategories=("Physics", "Mobile", "HLOD", "Sockets", "Navigation", "Tags", "Cooking"), meta = (DisplayName="Character Collision Sphere", BlueprintSpawnableComponent, Tooltip="A ready-to-use Collision Sphere for Characters. It primarily handles the most basic logics behind a Collision Sphere for characters."))
 class STRIVE_API UCharacterCollisionSphere : public USphereComponent
 {
 	GENERATED_BODY()
