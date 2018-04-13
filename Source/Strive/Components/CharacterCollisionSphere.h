@@ -8,6 +8,7 @@
 #include "CharacterCollisionSphere.generated.h"
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnOtherCharacterBeginOverlapSignature, class AOnlineCharacter*, OtherCharacter);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnOtherCharacterEndOverlapSignature, class AOnlineCharacter*, OtherCharacter);
 
 /**
  * 
@@ -28,6 +29,15 @@ public:
 			bool bFromSweep,
 			const FHitResult &SweepResult);
 
+	UFUNCTION()
+		void OnEndOverlap(UPrimitiveComponent* OverlappedComponent,
+			AActor* OtherActor,
+			UPrimitiveComponent* OtherComp,
+			int32 OtherBodyIndex);
+
 	UPROPERTY(BlueprintAssignable, Category = "Collision")
 		FOnOtherCharacterBeginOverlapSignature OnOtherCharacterBeginOverlap;
+
+	UPROPERTY(BlueprintAssignable, Category = "Collision")
+		FOnOtherCharacterEndOverlapSignature OnOtherCharacterEndOverlap;
 };

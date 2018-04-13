@@ -8,6 +8,7 @@
 UCharacterCollisionSphere::UCharacterCollisionSphere()
 {
 	OnComponentBeginOverlap.AddDynamic(this, &UCharacterCollisionSphere::OnBeginOverlap);
+	OnComponentEndOverlap.AddDynamic(this, &UCharacterCollisionSphere::OnEndOverlap);
 }
 
 void UCharacterCollisionSphere::OnBeginOverlap(
@@ -34,6 +35,28 @@ void UCharacterCollisionSphere::OnBeginOverlap(
 
 				this->OnOtherCharacterBeginOverlap.Broadcast(OverlappingCharacter);
 			}
+		}
+	}
+}
+
+void UCharacterCollisionSphere::OnEndOverlap(
+	UPrimitiveComponent* OverlappedComponent,
+	AActor* OtherActor,
+	UPrimitiveComponent* OtherComp,
+	int32 OtherBodyIndex)
+{
+	AActor* Owner = this->GetOwner();
+	AOnlineCharacter* OverlappingCharacter = Cast<AOnlineCharacter>(OtherActor);
+
+	if (OverlappingCharacter)
+	{
+		USkeletalMeshComponent* SkeletalMesh = Cast<USkeletalMeshComponent>(OtherComp);
+
+		if (SkeletalMesh)
+		{
+			AOnlineCharacter* SelfCharacter = Cast<AOnlineCharacter>(Owner);
+
+			this->OnOtherCharacterEndOverlap.Broadcast(OverlappingCharacter);
 		}
 	}
 }
