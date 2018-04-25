@@ -61,10 +61,10 @@ public class GameLiftServerSDK : ModuleRules
 
         if (bHasGameLiftSDK)
         {
+            bEnableExceptions = true;
+
             if (Target.Type == TargetRules.TargetType.Server)
             {
-                bEnableExceptions = true;
-
                 Definitions.Add("WITH_GAMELIFT=1");
                 
                 if (Target.Platform == UnrealTargetPlatform.Linux)

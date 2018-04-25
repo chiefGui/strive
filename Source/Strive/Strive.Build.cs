@@ -8,11 +8,24 @@ public class Strive : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "GameSparks", "OnlineSubsystem", "OnlineSubsystemUtils" });
+        // PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "GameSparks", "OnlineSubsystem", "OnlineSubsystemUtils", "GameLiftServerSDK" });
+        PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "GameSparks", "OnlineSubsystem", "OnlineSubsystemUtils", "GameLiftServerSDK" });
+
         PrivateDependencyModuleNames.AddRange(new string[] { });
 
         DynamicallyLoadedModuleNames.Add("OnlineSubsystemSteam");
 
+        bEnableExceptions = true;
+
+        if (Target.Type == TargetType.Server)
+        {
+            Definitions.Add("WITH_GAMELIFT=1");
+        } else
+        {
+            Definitions.Add("WITH_GAMELIFT=0");
+        }
+
+        /**
         if (Target.Type == TargetType.Server)
         {
             bEnableExceptions = true;
@@ -21,6 +34,7 @@ public class Strive : ModuleRules
         {
             Definitions.Add("WITH_GAMELIFT=0");
         }
+        */
 
         // Uncomment if you are using Slate UI
         // PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });
