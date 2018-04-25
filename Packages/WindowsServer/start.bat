@@ -1,4 +1,4 @@
-SET serverLocation=%~dp0WindowsServer
-SET fileName=StriveServer.exe
+SET serverLocation=%~dp0WindowsServer\Strive\Binaries\Win64
+SET fileName=StriveServer-Win64-Shipping.exe
 
-"%serverLocation%\%filename%" /Game/Levels/Westgrim/Landscape/Westgrim -log
+"%serverLocation%\%filename%" -log
