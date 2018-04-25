@@ -1,10 +1,11 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "OnlineGameMode.h"
-
-#if WITH_GAMELIFT
 #include "GameLiftServerSDK.h"
-#endif
+#include "Engine/World.h"
+#include <CommandLine.h>
+
+DEFINE_LOG_CATEGORY(LogGameLift);
 
 AOnlineGameMode::AOnlineGameMode()
 	: Super()
@@ -14,7 +15,7 @@ AOnlineGameMode::AOnlineGameMode()
 	FGameLiftServerSDKModule* gameLiftSdkModule = &FModuleManager::LoadModuleChecked<FGameLiftServerSDKModule>(FName("GameLiftServerSDK"));
 
 	//InitSDK establishes a local connection with GameLift's agent to enable further communication.
-	gameLiftSdkModule->InitSDK();
+	FGameLiftGenericOutcome SDK = gameLiftSdkModule->InitSDK();
 
 	//When a game session is created, GameLift sends an activation request to the game server and passes along the game session object containing game properties and other settings.
 	//Here is where a game server should take action based on the game session object.
@@ -41,15 +42,41 @@ AOnlineGameMode::AOnlineGameMode()
 	params->OnHealthCheck.BindLambda([]() {return true; });
 
 	//This game server tells GameLift that it listens on port 7777 for incoming player connections.
-	params->port = 7777;
+	UE_LOG(LogGameLift, Display, TEXT("GameLift is listening to port %d"), GetPort());
+	params->port = GetPort();
 
 	//Here, the game server tells GameLift what set of files to upload when the game session ends.
 	//GameLift uploads everything specified here for the developers to fetch later.
-	TArray<FString> logfiles;
-	logfiles.Add(TEXT("aLogFile.txt"));
-	params->logParameters = logfiles;
+	// TArray<FString> logfiles;
+	// logfiles.Add(TEXT("aLogFile.txt"));
+	// params->logParameters = logfiles;
 
 	//Calling ProcessReady tells GameLift this game server is ready to receive incoming game sessions!
 	gameLiftSdkModule->ProcessReady(*params);
 #endif
+}
+
+uint32 AOnlineGameMode::GetPortFromCommandLine()
+{
+	FString PortWithEqualsChar;
+
+	if (FParse::Value(FCommandLine::Get(), TEXT("port"), PortWithEqualsChar))
+	{
+		FString PortWithoutEqualsChar = *PortWithEqualsChar.Replace(TEXT("="), TEXT(""));
+		uint32 ProcessedPort = FCString::Atoi(*PortWithoutEqualsChar);
+
+		return ProcessedPort;
+	}
+
+	return 0;
+}
+
+bool AOnlineGameMode::IsPortValid(uint32 PortNumber)
+{
+	if (PortNumber > 0)
+	{
+		return true;
+	}
+
+	return false;
 }
