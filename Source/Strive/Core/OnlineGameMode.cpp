@@ -10,28 +10,70 @@ DEFINE_LOG_CATEGORY(LogGameLift);
 AOnlineGameMode::AOnlineGameMode()
 	: Super()
 {
-#if WITH_GAMELIFT
-	//Getting the module first.
-	FGameLiftServerSDKModule* gameLiftSdkModule = &FModuleManager::LoadModuleChecked<FGameLiftServerSDKModule>(FName("GameLiftServerSDK"));
+	// Only communicates with GameLift when the world is ready.
+	if (GetWorld())
+	{
+		SetGameLiftServerSDK(&FModuleManager::LoadModuleChecked<FGameLiftServerSDKModule>(FName("GameLiftServerSDK")));
 
-	//InitSDK establishes a local connection with GameLift's agent to enable further communication.
-	FGameLiftGenericOutcome SDK = gameLiftSdkModule->InitSDK();
+		//InitSDK establishes a local connection with GameLift's agent to enable further communication.
+		GetGameLiftServerSDK()->InitSDK();
 
+		StartGameLiftProcess(
+			GetGameLiftServerSDK()
+			, GetGameLiftProcessParameters(GetGameLiftServerSDK())
+		);
+	}
+}
+
+void AOnlineGameMode::StartGameLiftProcess(FGameLiftServerSDKModule* GameLiftServerSDK, FProcessParameters* GameLiftProcessParameters)
+{
+	UE_LOG(
+		LogGameLift
+		, Display
+		, TEXT("GameLift started a game process")
+	);
+
+	FGameLiftGenericOutcome GameProcess = GameLiftServerSDK->ProcessReady(*GameLiftProcessParameters);
+
+	if (GameProcess.IsSuccess()) {
+		UE_LOG(
+			LogGameLift
+			, Display
+			, TEXT("The game process has started successfully at port %d")
+			, GameLiftProcessParameters->port
+		);
+	}
+	else
+	{
+		UE_LOG(
+			LogGameLift
+			, Display
+			, TEXT("The game process failed at port %d with message: %s")
+			, GameLiftProcessParameters->port
+			, *GameProcess.GetError().m_errorMessage
+		);
+	}
+}
+
+FProcessParameters* AOnlineGameMode::GetGameLiftProcessParameters(FGameLiftServerSDKModule* GameLiftServerSDK)
+{
 	//When a game session is created, GameLift sends an activation request to the game server and passes along the game session object containing game properties and other settings.
 	//Here is where a game server should take action based on the game session object.
 	//Once the game server is ready to receive incoming player connections, it should invoke GameLiftServerAPI.ActivateGameSession()
-	auto onGameSession = [=](Aws::GameLift::Server::Model::GameSession gameSession)
+	auto StartGameSession = [=](Aws::GameLift::Server::Model::GameSession gameSession)
 	{
-		gameLiftSdkModule->ActivateGameSession();
+		GameLiftServerSDK->ActivateGameSession();
 	};
 
-	FProcessParameters* params = new FProcessParameters();
-	params->OnStartGameSession.BindLambda(onGameSession);
+	FProcessParameters* GameLiftProcessParameters = new FProcessParameters();
+	GameLiftProcessParameters->OnStartGameSession.BindLambda(StartGameSession);
 
 	//OnProcessTerminate callback. GameLift invokes this callback before shutting down an instance hosting this game server.
 	//It gives this game server a chance to save its state, communicate with services, etc., before being shut down.
 	//In this case, we simply tell GameLift we are indeed going to shut down.
-	params->OnTerminate.BindLambda([=]() {gameLiftSdkModule->ProcessEnding(); });
+	GameLiftProcessParameters->OnTerminate.BindLambda([=]() {
+		GameLiftServerSDK->ProcessEnding();
+	});
 
 	//This is the HealthCheck callback.
 	//GameLift invokes this callback every 60 seconds or so.
@@ -39,21 +81,14 @@ AOnlineGameMode::AOnlineGameMode()
 	//Simply return true if healthy, false otherwise.
 	//The game server has 60 seconds to respond with its health status. GameLift defaults to 'false' if the game server doesn't respond in time.
 	//In this case, we're always healthy!
-	params->OnHealthCheck.BindLambda([]() {return true; });
+	GameLiftProcessParameters->OnHealthCheck.BindLambda([]() {
+		return true;
+	});
 
-	//This game server tells GameLift that it listens on port 7777 for incoming player connections.
-	UE_LOG(LogGameLift, Display, TEXT("GameLift is listening to port %d"), GetPort());
-	params->port = GetPort();
+	//This game server tells GameLift that it listens on port XXXX for incoming player connections.
+	GameLiftProcessParameters->port = GetPort();
 
-	//Here, the game server tells GameLift what set of files to upload when the game session ends.
-	//GameLift uploads everything specified here for the developers to fetch later.
-	// TArray<FString> logfiles;
-	// logfiles.Add(TEXT("aLogFile.txt"));
-	// params->logParameters = logfiles;
-
-	//Calling ProcessReady tells GameLift this game server is ready to receive incoming game sessions!
-	gameLiftSdkModule->ProcessReady(*params);
-#endif
+	return GameLiftProcessParameters;
 }
 
 uint32 AOnlineGameMode::GetPortFromCommandLine()
@@ -79,4 +114,26 @@ bool AOnlineGameMode::IsPortValid(uint32 PortNumber)
 	}
 
 	return false;
+}
+
+void AOnlineGameMode::Logout(AController* Exiting)
+{
+	int NewNumberOfConnectedPlayers = this->GetNumPlayers() - 1;
+
+	if (NewNumberOfConnectedPlayers == 0)
+	{
+		OnAllPlayersDisconnected();
+	}
+}
+
+void AOnlineGameMode::OnAllPlayersDisconnected()
+{
+	UE_LOG(LogGameLift, Display, TEXT("All players have disconnected. The Game Session will be terminated."));
+
+	GetGameLiftServerSDK()->TerminateGameSession();
+
+	//StartGameLiftProcess(
+	//	GetGameLiftServerSDK()
+	//	, GetGameLiftProcessParameters(GetGameLiftServerSDK())
+	//);
 }
