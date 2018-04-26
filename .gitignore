@@ -4,6 +4,7 @@ Build/
 Intermediate/
 Saved/
 DerivedDataCache/
+Packages/Test
 Packages/WindowsNoEditor
 Packages/WindowsServer/Logs
 Packages/WindowsServer/Dependencies
@@ -14,7 +15,7 @@ Releases/
 Runtimes/
 x64/
 Assets/
-Strive.sln
+*.sln
 
 # Visual Studio 2015 user specific files
 .vs/
