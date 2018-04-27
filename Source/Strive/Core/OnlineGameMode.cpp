@@ -17,6 +17,8 @@ AOnlineGameMode::AOnlineGameMode()
 
 void AOnlineGameMode::BeginPlay()
 {
+	Super::BeginPlay();
+
 	// Only communicates with GameLift when the world is ready.
 	if (GetWorld())
 	{
