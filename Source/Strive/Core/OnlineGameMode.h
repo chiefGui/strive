@@ -23,23 +23,8 @@ public:
 	// The method called when all players have disconnected.
 	void OnAllPlayersDisconnected();
 
-	// Attempts to get current server port. First it looks up for a given port set through -port=something.
-	// Case nothing is found, continue looking up for a port defined through the World context.
-	// If both cases are invalid, returns 0.
-	FORCEINLINE int GetPort()
-	{
-		if (IsPortValid(GetPortFromCommandLine()))
-		{
-			return GetPortFromCommandLine();
-		}
-
-		if (GetWorld())
-		{
-			return GetWorld()->URL.Port;
-		}
-
-		return 0;
-	}
+	// Get NetDriverPort. Needed to send it to GameLift.
+	int32 GetNetDriverPort();
 
 	// The GameLiftServerSDK module property.
 	FGameLiftServerSDKModule* GameLiftServerSDK;
@@ -56,14 +41,11 @@ public:
 private:
 	FGameLiftServerSDKModule* GameLiftSDKModule;
 
-	// Get port from command line. Returns 0 if no port is found.
-	static uint32 GetPortFromCommandLine();
-
-	// Check if port is valid. Ports greater than 0 are considered valid.
-	static bool IsPortValid(uint32 PortNumber);
-
 	// Event that is triggered when a player controller disconnects from the server.
 	virtual void Logout(AController* Exiting) override;
+
+	// Begin Play
+	virtual void BeginPlay() override;
 	
 	// Set the GameLiftServerSDK. It's required to GetGameLiftServerSDK.
 	void SetGameLiftServerSDK(FGameLiftServerSDKModule* NewGameLiftServerSDK)

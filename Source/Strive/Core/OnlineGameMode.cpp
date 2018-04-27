@@ -4,11 +4,18 @@
 #include "GameLiftServerSDK.h"
 #include "Engine/World.h"
 #include <CommandLine.h>
+#include "IPAddress.h"
+#include "IpNetDriver.h"
 
 DEFINE_LOG_CATEGORY(LogGameLift);
 
 AOnlineGameMode::AOnlineGameMode()
 	: Super()
+{
+
+}
+
+void AOnlineGameMode::BeginPlay()
 {
 	// Only communicates with GameLift when the world is ready.
 	if (GetWorld())
@@ -17,11 +24,15 @@ AOnlineGameMode::AOnlineGameMode()
 
 		//InitSDK establishes a local connection with GameLift's agent to enable further communication.
 		GetGameLiftServerSDK()->InitSDK();
+		UE_LOG(LogGameLift, Display, TEXT("SDK successfully initiated."));
 
-		StartGameLiftProcess(
-			GetGameLiftServerSDK()
-			, GetGameLiftProcessParameters(GetGameLiftServerSDK())
-		);
+		if (GetWorld()->NetDriver)
+		{
+			StartGameLiftProcess(
+				GetGameLiftServerSDK()
+				, GetGameLiftProcessParameters(GetGameLiftServerSDK())
+			);
+		}
 	}
 }
 
@@ -30,7 +41,7 @@ void AOnlineGameMode::StartGameLiftProcess(FGameLiftServerSDKModule* GameLiftSer
 	UE_LOG(
 		LogGameLift
 		, Display
-		, TEXT("GameLift started a game process")
+		, TEXT("GameLift started a new game process.")
 	);
 
 	FGameLiftGenericOutcome GameProcess = GameLiftServerSDK->ProcessReady(*GameLiftProcessParameters);
@@ -39,7 +50,7 @@ void AOnlineGameMode::StartGameLiftProcess(FGameLiftServerSDKModule* GameLiftSer
 		UE_LOG(
 			LogGameLift
 			, Display
-			, TEXT("The game process has started successfully at port %d")
+			, TEXT("The game process is listening on port %d")
 			, GameLiftProcessParameters->port
 		);
 	}
@@ -48,7 +59,7 @@ void AOnlineGameMode::StartGameLiftProcess(FGameLiftServerSDKModule* GameLiftSer
 		UE_LOG(
 			LogGameLift
 			, Display
-			, TEXT("The game process failed at port %d with message: %s")
+			, TEXT("The game process failed on port %d with message: %s")
 			, GameLiftProcessParameters->port
 			, *GameProcess.GetError().m_errorMessage
 		);
@@ -86,34 +97,9 @@ FProcessParameters* AOnlineGameMode::GetGameLiftProcessParameters(FGameLiftServe
 	});
 
 	//This game server tells GameLift that it listens on port XXXX for incoming player connections.
-	GameLiftProcessParameters->port = GetPort();
+	GameLiftProcessParameters->port = GetNetDriverPort();
 
 	return GameLiftProcessParameters;
-}
-
-uint32 AOnlineGameMode::GetPortFromCommandLine()
-{
-	FString PortWithEqualsChar;
-
-	if (FParse::Value(FCommandLine::Get(), TEXT("port"), PortWithEqualsChar))
-	{
-		FString PortWithoutEqualsChar = *PortWithEqualsChar.Replace(TEXT("="), TEXT(""));
-		uint32 ProcessedPort = FCString::Atoi(*PortWithoutEqualsChar);
-
-		return ProcessedPort;
-	}
-
-	return 0;
-}
-
-bool AOnlineGameMode::IsPortValid(uint32 PortNumber)
-{
-	if (PortNumber > 0)
-	{
-		return true;
-	}
-
-	return false;
 }
 
 void AOnlineGameMode::Logout(AController* Exiting)
@@ -131,9 +117,12 @@ void AOnlineGameMode::OnAllPlayersDisconnected()
 	UE_LOG(LogGameLift, Display, TEXT("All players have disconnected. The Game Session will be terminated."));
 
 	GetGameLiftServerSDK()->TerminateGameSession();
+	GetGameLiftServerSDK()->ProcessEnding();
+}
 
-	//StartGameLiftProcess(
-	//	GetGameLiftServerSDK()
-	//	, GetGameLiftProcessParameters(GetGameLiftServerSDK())
-	//);
+int32 AOnlineGameMode::GetNetDriverPort()
+{
+	UIpNetDriver* NetDriver = Cast<UIpNetDriver>(GetWorld()->NetDriver);
+
+	return NetDriver->LocalAddr->GetPort();
 }
