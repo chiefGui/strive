@@ -18,10 +18,14 @@ class STRIVE_API AOnlinePlayerController : public APlayerController
 {
 	GENERATED_BODY()
 
-		IOnlineSubsystem* OnlineInterface = IOnlineSubsystem::Get();
+public:
+	IOnlineSubsystem* OnlineInterface = IOnlineSubsystem::Get();
 
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Online Features", meta=(Tooltip = "Gets the Steam's Session Ticket to use with GameSparks etc. This is an internal Strive function."))
 		FString GetSessionTicket();
 
-	UFUNCTION(BlueprintCallable) void AttachControllerToPawn(APawn* InPawn) { SetPawn(InPawn); }
+	UFUNCTION(BlueprintCallable)
+		void AttachControllerToPawn(APawn* InPawn) {
+			SetPawn(InPawn);
+		}
 };
