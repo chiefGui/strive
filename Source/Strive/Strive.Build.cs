@@ -17,7 +17,9 @@ public class Strive : ModuleRules
             "GameSparks",
             "OnlineSubsystem",
             "OnlineSubsystemUtils",
-            "GameLiftServerSDK"
+            "GameLiftServerSDK",
+            "MoviePlayer",
+            "UMG"
         });
 
         PrivateDependencyModuleNames.AddRange(new string[] { });
