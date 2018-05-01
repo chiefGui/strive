@@ -8,11 +8,6 @@ import (
 	"os"
 )
 
-// DeployManifest is a struct
-type DeployManifest struct {
-	BuildVersion string `json:"version"`
-}
-
 // BuildManifest is the object containing the build details
 type BuildManifest struct {
 	Key BuildDetails `json:"build"`
