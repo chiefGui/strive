@@ -1,1 +1,0 @@
-aws gamelift upload-build --operating-system WINDOWS_2012 --build-root ".\WindowsServer" --name StriveServerAlpha --build-version v2 --region sa-east-1

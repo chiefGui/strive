@@ -10,21 +10,8 @@ import (
 	"github.com/urfave/cli"
 )
 
-// AWSRegion is one of the available AWS regions.
-type AWSRegion string
-
-const (
-	// SAEast1 is the region corresponding to AWS' "sa-east-1"
-	SAEast1 AWSRegion = "sa-east-1"
-)
-
-// UploadBuildOptions is a type containing the needed information to deploy to AWS/GameLift.
-type UploadBuildOptions struct {
-	Name            string
-	OperatingSystem string
-	RootPath        string
-	AWSRegion       AWSRegion
-}
+// IsDebugging returns true if Deployer is running for debugging purposes.
+var IsDebugging = false
 
 func main() {
 	app := cli.NewApp()
@@ -34,13 +21,13 @@ func main() {
 		{
 			Name:   "server",
 			Action: server,
-		},
-	}
-	app.Flags = []cli.Flag{
-		cli.StringFlag{
-			Name:  "env",
-			Value: "development",
-			Usage: "Set the target environment of the deployment",
+			Flags: []cli.Flag{
+				cli.StringFlag{
+					Name:  "debug",
+					Value: "false",
+					Usage: "Set whether the command is running for debugging purposes or not",
+				},
+			},
 		},
 	}
 
@@ -52,11 +39,8 @@ func main() {
 }
 
 func server(c *cli.Context) error {
-	CurrentUploadBuildOptions := UploadBuildOptions{
-		Name:            "StriveAlpha",
-		OperatingSystem: "WINDOWS_2012",
-		RootPath:        "\".\\WindowsServer\"",
-		AWSRegion:       SAEast1,
+	if c.String("debug") == "true" {
+		IsDebugging = true
 	}
 
 	buildVersion := GetBuildVersion()
@@ -66,23 +50,41 @@ func server(c *cli.Context) error {
 		log.Fatal(err)
 	}
 
-	shouldProceed := askForConfirmation("A server build will be deployed with version " + Stringify(newBuildVersion) + ". You sure? (default 'yes')")
+	shouldDeploy := askForConfirmation(
+		GetBuildName() + " will be deployed with version " + StringifyInt(newBuildVersion) + " to region " + GetBuildAWSRegion() + ". You sure? (default 'yes')",
+	)
 
-	if shouldProceed {
-		deployCommandString := "gamelift upload-build" +
-			" --operating-system " + CurrentUploadBuildOptions.OperatingSystem +
-			" --build-root " + CurrentUploadBuildOptions.RootPath +
-			" --name " + CurrentUploadBuildOptions.Name +
-			" --region " + string(CurrentUploadBuildOptions.AWSRegion) +
-			" --build-version v" + Stringify(newBuildVersion)
+	if shouldDeploy {
+		command := "aws"
+		arguments := []string{
+			"gamelift",
+			"upload-build",
 
-		commandOutput, err := exec.Command("aws", deployCommandString).Output()
+			"--name",
+			GetBuildName(),
 
-		if err != nil {
-			log.Fatal(err.Error())
+			"--operating-system",
+			GetBuildOperatingSystem(),
+
+			"--build-root",
+			GetResolvedSourcePathName(),
+
+			"--region",
+			GetBuildAWSRegion(),
+
+			"--build-version",
+			"v" + StringifyInt(newBuildVersion),
 		}
 
-		fmt.Println(commandOutput)
+		commandOutput, err := exec.Command(command, arguments...).CombinedOutput()
+
+		if err != nil {
+			fmt.Println(string(commandOutput[:]))
+			os.Exit(1)
+		}
+
+		fmt.Println("Cool. Deployed successfully.")
+		WriteNewBuildVersion(newBuildVersion)
 
 		return nil
 	}
@@ -90,14 +92,6 @@ func server(c *cli.Context) error {
 	fmt.Println("Ok. Nothing will be deployed.")
 
 	return nil
-
-	// err = WriteNewBuildVersion(newBuildVersion)
-
-	// if err != nil {
-	// 	log.Fatal(err)
-	// }
-
-	// return nil
 }
 
 func getNewBuildVersion(oldBuildVersion string) (int, error) {
@@ -110,8 +104,4 @@ func getNewBuildVersion(oldBuildVersion string) (int, error) {
 	newBuildVersionInt := oldBuildVersionInt + 1
 
 	return newBuildVersionInt, nil
-}
-
-func reportUnexpectedError(e error) {
-	log.Fatal(e)
 }
