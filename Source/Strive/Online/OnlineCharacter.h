@@ -18,6 +18,9 @@ public:
 	UFUNCTION(BlueprintCallable, BlueprintPure, meta = (DisplayName = "Is Ally?", Tooltip = "Checks if given AOnlineCharacter is ally of the caller."))
 		bool IsAlly(AOnlineCharacter* Character);
 
+	UFUNCTION(BlueprintCallable, Category = "Components")
+		UActorComponent* AddComponentFromClass(UClass* ActorComponentClass);
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
