@@ -7,13 +7,13 @@ void UStriveGameInstance::Init()
 {
 	Super::Init();
 
-	FCoreUObjectDelegates::PreLoadMap.AddUObject(this, &UStriveGameInstance::BeginLoadingScreen);
-	FCoreUObjectDelegates::PostLoadMapWithWorld.AddUObject(this, &UStriveGameInstance::EndLoadingScreen);
+	//FCoreUObjectDelegates::PreLoadMap.AddUObject(this, &UStriveGameInstance::BeginLoadingScreen);
+	//FCoreUObjectDelegates::PostLoadMapWithWorld.AddUObject(this, &UStriveGameInstance::EndLoadingScreen);
 
-	if (DefaultLoadingScreenWidget)
-	{
-		LoadingScreenWidget = CreateWidget<UUserWidget>(this, DefaultLoadingScreenWidget);
-	}
+	//if (DefaultLoadingScreenWidget)
+	//{
+	//	LoadingScreenWidget = CreateWidget<UUserWidget>(this, DefaultLoadingScreenWidget);
+	//}
 }
 
 void UStriveGameInstance::BeginLoadingScreen(const FString& MapName)
