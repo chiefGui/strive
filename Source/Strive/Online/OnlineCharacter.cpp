@@ -1,6 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "OnlineCharacter.h"
+#include "CoreUObject.h"
 
 
 // Sets default values
@@ -52,3 +53,25 @@ bool AOnlineCharacter::IsAlly(AOnlineCharacter* Character)
 	return false;
 }
 
+UActorComponent* AOnlineCharacter::AddComponentFromClass(UClass* ActorComponentClass)
+{
+	UClass* baseClass = FindObject<UClass>(ANY_PACKAGE, TEXT("ActorComponent"));
+
+	if (ActorComponentClass->IsChildOf(baseClass))
+	{
+		UActorComponent* NewComponent = NewObject<UActorComponent>(this, ActorComponentClass);
+
+		if (!NewComponent)
+		{
+			return NULL;
+		}
+
+		NewComponent->RegisterComponent();
+
+		return NewComponent;
+	}
+	else
+	{
+		return NULL;
+	}
+}
