@@ -4,6 +4,6 @@
     "os": "WINDOWS_2012",
     "sourcePath": "./Packages/WindowsServer",
     "AWSRegion": "sa-east-1",
-    "version": "0"
+    "version": "1"
   }
 }
