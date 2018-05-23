@@ -4,5 +4,5 @@
 
 UStriveConstants::UStriveConstants(const FObjectInitializer& ObjectInitializer)
 {
-
+	CharacterSelectionTimeout = 60.f;
 }
