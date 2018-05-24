@@ -106,6 +106,8 @@ FProcessParameters* AOnlineGameMode::GetGameLiftProcessParameters(FGameLiftServe
 
 void AOnlineGameMode::Logout(AController* Exiting)
 {
+	Super::Logout(Exiting);
+
 	int NewNumberOfConnectedPlayers = this->GetNumPlayers() - 1;
 
 	if (NewNumberOfConnectedPlayers == 0)
