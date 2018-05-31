@@ -12,8 +12,11 @@ class UStriveConstants : public UObject
 public:
 	UStriveConstants(const FObjectInitializer& ObjectInitializer);
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Globals", meta = (DisplayName = "Character Selection Timeout"))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Timers", meta = (DisplayName = "Character Selection Timeout"))
 		float CharacterSelectionTimeout;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Timers", meta = (DisplayName = "Character Post Match Timeout"))
+		float CharacterPostMatchTimeout;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Development", meta = (DisplayName = "Can Craft Without Ingredients?"))
 		bool bCanCraftWithoutIngredients;
