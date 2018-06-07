@@ -133,6 +133,10 @@
 		{
 			"Name": "UObjectPlugin",
 			"Enabled": false
+		},
+		{
+			"Name": "LoadingScreen",
+			"Enabled": true
 		}
 	],
 	"TargetPlatforms": [
