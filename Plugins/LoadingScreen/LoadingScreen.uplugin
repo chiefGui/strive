@@ -12,7 +12,6 @@
   "SupportURL": "https://github.com/ue4plugins/LoadingScreen/issues",
   "EnabledByDefault": false,
   "CanContainContent": true,
-
   "Modules": [
     {
       "Name": "LoadingScreen",

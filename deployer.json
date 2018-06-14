@@ -3,7 +3,7 @@
     "name": "StriveAlpha",
     "os": "WINDOWS_2012",
     "sourcePath": "./Packages/WindowsServer",
-    "AWSRegion": "sa-east-1",
-    "version": "1"
+    "AWSRegion": "us-west-2",
+    "version": "3"
   }
 }

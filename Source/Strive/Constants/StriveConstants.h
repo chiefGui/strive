@@ -18,6 +18,12 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Timers", meta = (DisplayName = "Character Post Match Timeout"))
 		float CharacterPostMatchTimeout;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "GameSparks", meta = (DisplayName = "Player Secret"))
+		FString PlayerSecret;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "GameSparks", meta = (DisplayName = "Server Secret"))
+		FString ServerSecret;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Development", meta = (DisplayName = "Can Craft Without Ingredients?"))
 		bool bCanCraftWithoutIngredients;
 
